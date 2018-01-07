@@ -1,0 +1,29 @@
+/* add your CSS here */
+body {
+  text-align: center;
+  overflow: hidden;
+  font-family: helvetica, sans-serif;
+}
+
+#title {
+  text-align: left;
+  margin: 8px 0px 15px 0px;
+}
+
+.container, img {
+  width: 300px;
+}
+
+img {
+  padding-bottom: 8px;
+}
+
+.container {
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.inner {
+  border: 1px solid #ccc;
+}

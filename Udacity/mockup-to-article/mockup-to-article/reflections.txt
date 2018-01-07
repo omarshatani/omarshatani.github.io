@@ -1,0 +1,10 @@
+You've learned a lot about web development so far. I want you to take a moment to write down your thoughts about web development here. Answer the following questions:
+  * What new skills have you learned?
+  * What has been easy?
+  * What has been difficult?
+  * How have you used the problem solving strategies from the first project to overcome challenges so far?
+
+---
+
+The first part of the course was really easy to understand. I learnt some new tags (<sup>, <figure>) and understood how a web page works. A more complicated part (but still enjoyable) was tranforming some plain text into an article with HTML. To finish the task I had to search into the MDN docs, and I actually enjoyed it a little bit. Formatting each piece of the article was very funny too!
+I'm so exited for what comes next :D

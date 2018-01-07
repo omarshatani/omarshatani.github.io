@@ -1,0 +1,43 @@
+/* add your CSS here */
+#inFacts {
+	font-style: italic;
+}
+
+h3 {
+	text-align: left;
+	font-size: 1.5em;
+	margin-top: 3px;
+	margin-bottom: 8px;
+}
+
+p {
+	font-size: 0.9em;
+}
+
+img {
+	padding-bottom: 5px;
+}
+
+span {
+	font-weight: bold;
+}
+
+
+ul {
+	list-style-type: none;
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+#Sizer {
+	width: 300px;
+	text-align: justify;
+	box-shadow: 3px 3px 0px #F2F2F2;
+}
+
+.card {
+	border: 1px solid #CCCCCC;
+	padding: 10px;
+	margin: 0;
+}

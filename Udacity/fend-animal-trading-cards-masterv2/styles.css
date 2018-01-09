@@ -1,10 +1,4 @@
 /* add your CSS here */
-body {
-  text-align: center;
-  overflow: hidden;
-  font-family: helvetica, sans-serif;
-}
-
 #title {
   text-align: left;
   margin: 8px 0px 15px 0px;
@@ -26,4 +20,27 @@ img {
 
 .inner {
   border: 1px solid #ccc;
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+.italic {
+  font-style: italic;
+  line-height: 120%;
+}
+
+.justify {
+  text-align: justify;
+  text-justify: none;
+}
+
+.centered {
+  list-style: none;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.centered span {
+  font-weight: bold;
 }

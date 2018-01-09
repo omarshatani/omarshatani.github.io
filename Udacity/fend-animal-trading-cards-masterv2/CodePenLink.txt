@@ -1,0 +1,2 @@
+<p data-height="287" data-theme-id="0" data-slug-hash="pparZv" data-default-tab="html,result" data-user="Shaon96" data-embed-version="2" data-pen-title="pparZv" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/Shaon96/pen/pparZv/">pparZv</a> by OMAR SHATANI (<a href="https://codepen.io/Shaon96">@Shaon96</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>

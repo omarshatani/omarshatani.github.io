@@ -1,70 +1,70 @@
-// Select color input
-// Select size input
+//Variables declaration
+let inputWidth,
+inputHeight,
+width,
+height,
+colorPicker,
+color,
+table,
+form,
+cell;
 
-// When size is submitted by the user, call makeGrid()
+//Variables assignments
+inputWidth = $('#input_width');
+inputHeight = $('#input_height');
+width = inputWidth.val();
+height = inputHeight.val();
+colorPicker = $('#colorPicker');
+color = colorPicker.val();
+table = $('#pixel_canvas');
+form = $('#sizePicker');
+cell = $('td');
 
-function makeGrid(width, height) {
+//Functions
+function makeGrid (width, height) {
+  //Clean old table
+  table.children().remove();
+  //Rows loop
+  for (let row = 0; row < height; row++) {
+    table.append('<tr></tr>\n');
+  }
+  //Columns loop
+  for (let column = 0; column < width; column++) {
+    $('tr').append('<td></td>\n');
+  }
+}
+//Cell listener
+function draw (color) {
+  $('td').click(function () {
+    $(this).css('background-color', color); //color the cell
+  });
+}
 
-	//clear table
-	$("#pixel_canvas").children().remove();
+//Listeners
+colorPicker.change(function () {
+  if ($(this).val() != color)
+    color = $(this).val();
+  console.log(color);
+  draw(color);
+});
 
-	//create row
-	for (let i = 0; i < height; i++) {
-		$('table').append('<tr></tr>\n');
-	}
-	//create columns
-	for (let j = 0; j < width; j++) {
-		$('tr').append("<td></td>\n");
-	}
-};
+inputWidth.change(function () {
+  if ($(this).val() != width)
+    width = $(this).val();
+  console.log(width);
+});
 
+inputHeight.change(function () {
+  if ($(this).val() != height)
+    height = $(this).val();
+  console.log(height);
+});
 
-
-function addColor () { 
-	let color = $('input[type="color"]').val();
-	let isPressed;
-
-	color.change(function () {
-		color = $('input[type="color"]').val();
-	});
-
-	color.on("change", function() {
-    	$("td").css("background-color", $("#color").val());
-	});
-
-	$(document).keydown(function (event) {
-		if (event.which == 17)
-	    	isPressed = true;
-	});
-
-	$(document).keyup(function (event) {
-		 isPressed = false;
-	});
-
-	$('td').mousedown(function (event) {
-	    if (isPressed) {
-	        $(this).css("background-color", "#FFFFFF");
-	    } else {
-	        $(this).css("background-color", color);
-	    }
-	});
-
-
-};
-
+//Main
 $(document).ready(function () {
-
-	//When button is clicked, create Grid
-	$("form").submit(function (evt) {	
-		var width, height;
-
-		width = ($("#input_width").val());
-		height = ($("#input_height").val());
-
-		evt.preventDefault();
-
-		makeGrid(width, height);
-		addColor();
-	});
-
+  form.submit(function (event) {
+    event.preventDefault();
+    makeGrid(width, height);
+    draw(color);
+  });
 });

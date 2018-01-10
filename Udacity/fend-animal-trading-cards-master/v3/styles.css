@@ -1,0 +1,95 @@
+/* add your CSS here */
+body {
+  font-family: 'Merriweather', serif;
+}
+
+#title {
+  text-align: left;
+  margin: 8px 0px 15px 0px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.container {
+  background-color: #bf9853;
+  width: 280px;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  border: 10px solid #423c4a;
+  border-radius: 4px;
+}
+
+.container img {
+  width: 250px;
+  border: 3px solid #ccc;
+  margin-bottom: 5px;
+}
+
+.inner {
+  text-align: left;
+  border: 1px solid #ccc;
+  padding: 3px 4px 0 4px;
+  font-size: 13px;
+}
+
+.italic {
+  font-style: italic;
+  line-height: 120%;
+}
+
+.justify {
+  text-align: justify;
+  text-justify: none;
+}
+
+.centered {
+  list-style: none;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.centered span {
+  font-weight: bold;
+}
+
+.type {
+  margin: 2px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.description, .power {
+  font-family: 'Lato', times;
+}
+
+.description {
+  line-height: 100%;
+  text-align: justify;
+  margin: 4px 0 8px 0;
+}
+
+.power {
+  text-align: right;
+  bottom: 0;
+  padding-bottom: 3px;
+}
+
+.power ul {
+  margin: 0;
+  padding: 0;
+}
+
+.power li {
+  list-style: none;
+  display: inline;
+}
+
+hr {
+  color: #ccc;
+  border-style: solid;
+  margin: 3px 0 3px 0;
+}

@@ -6,8 +6,7 @@ height,
 colorPicker,
 color,
 table,
-form,
-cell;
+form;
 
 //Variables assignments
 inputWidth = $('#input_width');
@@ -18,7 +17,6 @@ colorPicker = $('#colorPicker');
 color = colorPicker.val();
 table = $('#pixel_canvas');
 form = $('#sizePicker');
-cell = $('td');
 
 //Functions
 function makeGrid (width, height) {

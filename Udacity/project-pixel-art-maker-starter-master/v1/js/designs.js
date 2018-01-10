@@ -29,8 +29,10 @@ function makeGrid (width, height) {
     table.append('<tr></tr>\n');
   }
   //Columns loop
-  for (let column = 0; column < width; column++) {
-    $('tr').append('<td></td>\n');
+  let column = 0;
+  while (column < width) {
+    $('tr').append('<td></td>');
+    column++;
   }
 }
 //Cell listener

@@ -3,11 +3,42 @@ body {
   font-family: 'Merriweather', serif;
 }
 
-#title {
-  text-align: left;
-  margin: 8px 0px 15px 0px;
+.title ul {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+}
+
+.title li {
+  list-style: none;
+}
+
+.title h1 {
+  margin: 8px 0px 10px 0px;
   font-size: 20px;
   text-transform: uppercase;
+}
+
+.title img {
+  width: 24px;
+}
+
+.level {
+  text-align: right;
+}
+
+.level ul {
+  margin: 0 13px 0 0;
+  padding: 0;
+}
+
+.level li {
+  list-style: none;
+  display: inline-block;
+}
+
+.level img {
+    width: 15px;
 }
 
 .container {
@@ -21,7 +52,7 @@ body {
   border-radius: 4px;
 }
 
-.container img {
+#main {
   width: 250px;
   border: 3px solid #ccc;
   margin-bottom: 5px;

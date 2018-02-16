@@ -37,7 +37,10 @@ td {
 }
 
 input[type=number] {
-    width: 6em;
+    width: 5em;
+    font-family: monospace;
+    font-size: 20px;
+    padding: 3px;
 }
 
 textarea {

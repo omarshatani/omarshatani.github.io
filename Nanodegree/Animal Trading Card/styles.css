@@ -19,23 +19,24 @@ h3 {
   text-shadow: 1px 1px #ccc;
 }
 
-.description li {
+.no-dots {
   list-style: none;
 }
 
-.description ul {
+.no-padding {
   padding: 0;
 }
 
-.description, img {
+.description,
+img {
   border: 1px solid #ccc;
 }
 
-.description span {
+.bold {
   font-weight: bold;
 }
 
-#italic {
+.italic {
   font-style: italic;
 }
 

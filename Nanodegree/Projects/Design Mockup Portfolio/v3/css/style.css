@@ -54,7 +54,23 @@ h3 {
 }
 
 .section__title {
-  
+  padding: 20px 0;
+  width: 100%;
+}
+
+.title {
+  margin: 0;
+}
+
+.about__img {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.about__img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 100%;
 }
 
 .about__description {
@@ -66,7 +82,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  flex-direction: column;
+  /* flex-direction: column; */
   text-align: center;
 }
 
@@ -97,10 +113,10 @@ h3 {
 .intro__thumb img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 5%;
 }
 
-@media screen and (min-width: 426px) {
+/* @media screen and (min-width: 426px) {
 
   .my__works {
     flex-direction: row;
@@ -119,4 +135,4 @@ h3 {
     /* margin: 0 auto; */
   }
 
-}
+} */

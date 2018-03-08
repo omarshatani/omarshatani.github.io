@@ -57,16 +57,24 @@ h3 {
   background-color: #ececec;
 }
 
+#footer {
+  background-color: #252424;
+  color: #fff;
+  width: 20vw;
+}
+
 .section__title {
   padding: 20px 0;
   width: 100%;
-  font-weight: bold;
-  font-size: 1.8rem;
-  text-transform: unset;
+  /* font-weight: bold; */
 }
 
 .title {
   margin: 0;
+  font-size: 2.3rem;
+  text-transform: unset;
+  margin: 5% 0;
+  font-weight: 400;
 }
 
 .about__img {
@@ -115,8 +123,8 @@ h3 {
 }
 
 .intro__thumb {
-  width: 80%;
-  margin: 0 auto;
+  width: 85%;
+  margin: 5% auto;
 }
 
 .intro__thumb img {
@@ -124,6 +132,8 @@ h3 {
   height: auto;
   border-radius: 3%;
 }
+
+
 
 /* @media screen and (min-width: 426px) {
 

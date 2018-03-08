@@ -53,9 +53,16 @@ h3 {
   padding: 0 30px;
 }
 
+#featured_works {
+  background-color: #ececec;
+}
+
 .section__title {
   padding: 20px 0;
   width: 100%;
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-transform: unset;
 }
 
 .title {
@@ -74,8 +81,10 @@ h3 {
 }
 
 .about__description {
+  font-size: 1.2rem;
   margin: 0 auto;
   max-width: 230px;
+  padding: 10px;
 }
 
 .my__works {
@@ -128,11 +137,9 @@ h3 {
 
   .intro__works {
     width: 100%;
-  }
+  } */
 
-  .intro__thumb {
+  /* .intro__thumb {
     width: 45%;
-    /* margin: 0 auto; */
-  }
-
-} */
+    /* margin: 0 auto;
+  } */

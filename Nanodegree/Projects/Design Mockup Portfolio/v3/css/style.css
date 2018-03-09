@@ -57,10 +57,17 @@ h3 {
   background-color: #ececec;
 }
 
+#skills {
+  background-image: url('/src/city.jpg');
+  background-position: center center;
+  color: #fff;
+  background-size: cover;
+}
+
 #footer {
   background-color: #252424;
   color: #fff;
-  height: 200px;
+  /* height: 200px; */
 }
 
 .section__title {
@@ -133,6 +140,18 @@ h3 {
   border-radius: 3%;
 }
 
+.skills__img {
+  width: 100%;
+}
+
+.skills__img img {
+  max-width: 60%;
+  height: auto;
+}
+
+.skills__wrapper {
+  width: 100%;
+}
 
 
 /* @media screen and (min-width: 426px) {

@@ -1,7 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
 body,
 html {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
+}
+
+body {
+  font-size: 1.5em;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+.hero__img {
+  background-image: url('/src/hero.jpg');
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  /* position: fixed; */
+  /* top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -100; */
+}
+
+.hero__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  text-transform: uppercase;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+.black {
+  background-color: #000;
+}
+
+.container {
+  width: 100%;
+  height: 200px;
 }

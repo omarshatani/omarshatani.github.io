@@ -42,6 +42,10 @@ h2 {
   text-transform: uppercase;
 }
 
+.big__heading {
+  font-size: 240px;
+}
+
 .blue {
   background-color: blue;
 }
@@ -56,5 +60,19 @@ h2 {
 
 .container {
   width: 100%;
-  height: 200px;
+  /* height: 200px; */
+}
+
+.about__wrapper {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 80px;
+}
+
+.about__img,
+.about__description {
+  width: 45%;
+  text-align: center;
 }

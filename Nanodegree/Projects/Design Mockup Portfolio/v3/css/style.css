@@ -1,7 +1,11 @@
 body {
-  font-size: 5rem;
+  font-size: 5em;
   margin: 0;
   overflow-x: hidden;
+}
+
+article, aside, footer, header, hgroup, main, nav, section {
+    display: block;
 }
 
 h1,
@@ -38,7 +42,7 @@ h3 {
 .intro h1 {
   /* letter-spacing: -1px; */
   color: white;
-  font-size: 1.8rem;
+  /* font-size: 1.8rem; */
   margin-top: 40%;
   margin-left: auto;
   margin-right: auto;
@@ -103,7 +107,7 @@ h3 {
 }
 
 .about__description {
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
   margin: 0 auto;
   max-width: 230px;
   padding: 10px;
@@ -118,7 +122,7 @@ h3 {
 }
 
 .intro__works {
-  font-size: 2rem;
+  /* font-size: 2rem; */
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   width: 80%;
@@ -145,6 +149,10 @@ h3 {
   max-width: 100%;
   height: auto;
   border-radius: 3%;
+}
+
+.intro__thumb p {
+  font-size: 20px;
 }
 
 .skills__img {
@@ -218,8 +226,8 @@ h3 {
 }
 
 @media screen and (min-width: 886px) {
-  .container {
-    width: 886px;
+    .container {
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }

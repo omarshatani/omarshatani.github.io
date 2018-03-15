@@ -4,10 +4,6 @@ body {
   overflow-x: hidden;
 }
 
-article, aside, footer, header, hgroup, main, nav, section {
-    display: block;
-}
-
 h1,
 h3 {
   font-family: 'Montserrat', sans-serif;

@@ -14,11 +14,24 @@ nav {
   box-sizing: border-box;
 }
 
-a,
 h1,
 h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
   margin: 0;
+}
+
+.navigation a {
+  font-family: 'Poppins', 'Raleway', sans-serif;
+  width: 0.9em;
+  margin-bottom: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+}
+
+.navigation a:hover {
+  box-shadow: 0 2px #fff;
 }
 
 .header {
@@ -48,6 +61,10 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.intro h1 {
+  font-family: 'Raleway', sans-serif;
 }
 
 .hero {
@@ -88,13 +105,14 @@ contacts {
 
 .section-title {
   width: 100%;
-  text-align: center;
 }
 
 .section-title h1 {
   margin: 35px 0 35px 0;
+  font-size: 1.6em;
   font-weight: bolder;
   font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
 }
 
 .content {
@@ -107,6 +125,8 @@ contacts {
 
 .description {
   font-size: 2em;
+  font-family: 'Raleway', 'Poppins', sans-serif;
+  letter-spacing: 1px;
 }
 
 .contact-icons {
@@ -117,13 +137,41 @@ contacts {
   max-width: 256px;
 }
 
+.contact-icons img {
+  max-width: 28px;
+}
+
 #contact-wrapper {
   margin: 0 auto;
-  max-width: 330px;
+  width: 19%;
+  padding: 10px 0;
+}
+
+.profile-wrap {
+  width: 40%;
 }
 
 input {
   margin: 20px auto 20px auto;
+}
+
+input[type="text"] {
+  height: 40px;
+  width: 200px;
+  font-size: 17px;
+  padding: 0px 10px;
+}
+
+input[type=submit] {
+  background-color: #3a3a3a;
+  border: none;
+  color: white;
+  padding: 13px 42px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .column {
@@ -132,45 +180,27 @@ input {
 
 .big {
   width: 80%;
+  margin-left:  20px;
 }
 
-.small {
-  width: 60%;
+.medium {
+  width: 67%;
 }
 
 .very-small {
   width: 33%;
 }
 
-/* .footer {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-} */
-
-/* #about {
-  background-color: #fff;
+.spacer {
+  padding: 15px 0 20px 0;
 }
 
-#works {
-  background-color: #ececec;
+.divider {
+  width: 70%;
+  height: 1px;
+  background-color: #00000047;
+  margin: 0 auto;
 }
-
-#skills {
-  background-image: url('/src/city.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff;
-}
-
-#contacts {
-  background-color: #fff;
-}
-
-#foot {
-  background-color: #252525;
-} */
 
 .about-me,
 .contact-me {
@@ -193,7 +223,24 @@ input {
   background-color: #252525;
 }
 
+.icons8-credits {
+  width: 100%;
+  text-align: center;
+}
+
+.icons8-credits a {
+  opacity: 0.7;
+  font-size: 0.8em;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  color: #fff;
+}
+
 @media screen and (max-width: 591px) {
+
+  .divider {
+    display: none;
+  }
 
   .navigation {
     display: none;
@@ -208,27 +255,17 @@ input {
     padding: 3%;
   }
 
-  /* .hero {
-    height: 100vh;
-    min-height: 400px;
-  } */
-
   .intro h1 {
-    /* padding: 150px 0; */
     font-size: 2.4em;
     font-weight: 400;
-    /* font-size-adjust: auto; */
     text-transform: uppercase;
     text-align: center;
     color: #fff;
-    font-family: 'Montserrat', sans-serif;
     text-shadow: 2px 2px rgba(6, 6, 6, 0.6196078431372549);
   }
 
   .section-title h1 {
     margin: 35px 0 35px 0;
-    font-weight: bolder;
-    font-family: 'Montserrat', sans-serif;
   }
 
   .profile-img {
@@ -240,13 +277,16 @@ input {
   .description {
     font-size: 1.2rem;
     text-align: center;
-    /* width: 80%; */
-    margin: 50px auto;
+    padding: 11px 0 20px 0;
     max-width: 340px;
   }
 
   .skill-img {
     width: 120px;
+  }
+
+  h1 {
+    margin-top: 22px;
   }
 
   h2 {
@@ -261,16 +301,9 @@ input {
     border-radius: 3%;
   }
 
-  /* .contact-icons {
-    width: 33%;
-  } */
-
-  .contact-icons img {
-    max-width: 48px;
-  }
-
   #contact-wrapper {
     padding: 12px;
+    width: 30%;
   }
 
   .profile-wrap {
@@ -305,28 +338,16 @@ input {
   .navigation a {
     width: 15%;
     padding: 11px;
-    text-transform: uppercase;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.8em;
+
   }
 
   .intro h1 {
-    /* padding: 10px 0; */
-    /* margin-top: 14%; */
     font-size: 3.2em;
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
     color: #fff;
-    font-family: 'Montserrat', sans-serif;
     text-shadow: 2px 2px rgba(6, 6, 6, 0.6196078431372549);
-  }
-
-  .section-title h1 {
-    font-size: 1.3em;
-    font-weight: 500;
   }
 
   .profile-img {
@@ -338,14 +359,6 @@ input {
   .description {
     font-size: 1rem;
     text-align: justify;
-    /* width: 85%; */
-    margin-left: 30px;
-    /* margin: 50px auto; */
-    /* max-width: 340px; */
-  }
-
-  .profile-wrap {
-    width: 47%;
   }
 
   .content {
@@ -367,22 +380,6 @@ input {
     font-size: 1.2rem;
     font-weight: 300;
   }
-
-  /* .contact-icons {
-    width: 33%;
-  } */
-
-  .contact-icons img {
-    max-width: 48px;
-  }
-
-  /* #contact-wrapper {
-    margin: 0 auto;
-  } */
-
-  /* .very-small {
-    width: 100%;
-  } */
 
 }
 
@@ -406,30 +403,17 @@ input {
   }
 
   .navigation a {
-    width: 15%;
-    padding: 11px;
-    text-transform: uppercase;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.8em;
+    width: 12%;
+    padding: 11px 20px;
   }
 
   .intro h1 {
-    /* padding: 10px 0; */
-    /* margin-top: 14%; */
     font-size: 3.2em;
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
     color: #fff;
-    font-family: 'Montserrat', sans-serif;
     text-shadow: 2px 2px rgba(6, 6, 6, 0.6196078431372549);
-  }
-
-  .section-title h1 {
-    font-size: 1.3em;
-    font-weight: 500;
   }
 
   .profile-img {
@@ -438,24 +422,17 @@ input {
     max-width: 300px;
   }
 
+  .profile-wrap p {
+    width: 80%;
+  }
+
   .description {
     font-size: 1rem;
     text-align: justify;
-    /* width: 85%; */
-    margin-left: 30px;
-    /* margin: 50px auto; */
-    /* max-width: 340px; */
-  }
-
-  .profile-wrap {
-    width: 47%;
   }
 
   .content {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    padding: 5% 0;
+    padding: 4% 0;
   }
 
   .works-img {
@@ -466,6 +443,7 @@ input {
   .skill-img {
     width: 160px;
     padding: 10px;
+    margin-left: 22px;
   }
 
   h2 {
@@ -474,24 +452,18 @@ input {
     font-weight: 300;
   }
 
-
-  .contact-icons img {
-    max-width: 48px;
-  }
-
-  /* #contact-wrapper {
-    margin: 0 auto;
-  } */
-
   #skill {
     flex-direction: row;
   }
+
 }
 
 @media screen and (min-width: 1040px) {
+
   .container {
     width: 1040px;
     margin-left: auto;
     margin-right: auto;
   }
+
 }

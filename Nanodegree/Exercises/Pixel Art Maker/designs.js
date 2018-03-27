@@ -9,17 +9,22 @@ document.addEventListener('DOMContentLoaded', function () {
   let height = inputHeight.value;
   let color = colorPicker.value;
   const canvas = document.getElementById('pixelCanvas');
-  const canvas__tbody = canvas.firstElementChild;
 
   //Create a grid WIDTH x HEIGHT
   function makeGrid (width, height) {
-    canvas.removeChild(canvas__tbody);
-    for (let i = 0; i < width; i++) {
-      // const aBlock = document.createElement('tbody').appendChild(document.createElement('tr')).insertAdjacentElement('afterbegin', document.createElement('tr'));
+    let rows;
+    for (let i = 0; i < height; i++) {
+      canvas.insertRow();
+    }
+    rows = document.getElementsByTagName('tr');
+    for (row of rows) {
+      for (let j = 0; j < height; j++) {
+        row.insertCell(j);
+      }
     }
   }
 
-
+  
 
 
 

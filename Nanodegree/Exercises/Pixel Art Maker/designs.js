@@ -56,16 +56,10 @@ document.addEventListener('DOMContentLoaded', function () {
       event.target.style.setProperty('background-color', color);
   });
 
-  //Submit Listener
+  //SUBMIT Listener
   sizePicker.addEventListener('submit', function (event) {
     event.preventDefault();
     makeGrid(width, height);
   });
-
-
-
-
-
-
 
 });

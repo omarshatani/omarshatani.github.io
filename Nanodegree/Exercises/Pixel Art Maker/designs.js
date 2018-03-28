@@ -51,13 +51,16 @@ document.addEventListener('DOMContentLoaded', function () {
   //CLICK Listener
   canvas.addEventListener('click', function (event) {
     if (event.target.nodeName === 'TD') {
-      console.log('Clicked' + this.);
+      console.log('Clicked');
       // this.style.setProperty('background-color', color);
     }
   });
 
-  //
-
+  //Submit Listener
+  sizePicker.addEventListener('submit', function (event) {
+    event.preventDefault();
+    makeGrid(width, height);
+  });
 
 
 

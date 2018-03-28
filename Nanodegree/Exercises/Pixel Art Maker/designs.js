@@ -13,13 +13,12 @@ document.addEventListener('DOMContentLoaded', function () {
   //Create a grid WIDTH x HEIGHT
   function makeGrid (width, height) {
     let rows;
-    const fragment = document.createDocumentFragment();
     for (let i = 0; i < height; i++) {
-      fragment.insertRow();
+      canvas.insertRow();
     }
     rows = document.getElementsByTagName('tr');
     for (row of rows) {
-      for (let j = 0; j < height; j++) {
+      for (let j = 0; j < width; j++) {
         row.insertCell(j);
       }
     }

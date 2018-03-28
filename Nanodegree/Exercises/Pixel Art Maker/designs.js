@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
   //Create a grid WIDTH x HEIGHT
   function makeGrid (width, height) {
     let rows;
+    if (canvas.hasChildNodes())
+      canvas.firstElementChild.remove();
     for (let i = 0; i < height; i++) {
       canvas.insertRow();
     }

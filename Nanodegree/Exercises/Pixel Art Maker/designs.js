@@ -24,7 +24,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  
+  //WIDTH Listener
+  inputWidth.addEventListener('change', function () {
+    if (this.value !== width) {
+      width = this.value;
+    }
+  });
+
+
 
 
 

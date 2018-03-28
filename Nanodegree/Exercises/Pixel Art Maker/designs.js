@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
   inputWidth.addEventListener('change', function () {
     if (this.value !== width) {
       width = this.value;
+      console.log(width);
     }
   });
 
@@ -47,6 +48,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  //CLICK Listener
+  canvas.addEventListener('click', function (event) {
+    if (event.target.nodeName === 'TD') {
+      console.log('Clicked' + this.);
+      // this.style.setProperty('background-color', color);
+    }
+  });
+
+  //
 
 
 

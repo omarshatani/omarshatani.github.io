@@ -13,8 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
   //Create a grid WIDTH x HEIGHT
   function makeGrid (width, height) {
     let rows;
+    const fragment = document.createDocumentFragment();
     for (let i = 0; i < height; i++) {
-      canvas.insertRow();
+      fragment.insertRow();
     }
     rows = document.getElementsByTagName('tr');
     for (row of rows) {
@@ -31,6 +32,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  //HEIGHT Listener
+  inputHeight.addEventListener('change', function () {
+    if (this.value !== height) {
+      height = this.value;
+      console.log(height);
+    }
+  });
 
 
 

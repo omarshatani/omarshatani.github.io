@@ -39,6 +39,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  //COLOR Listener
+  colorPicker.addEventListener('change', function () {
+    if (this.value !== color) {
+      color = this.value;
+      console.log(color);
+    }
+  });
+
 
 
 

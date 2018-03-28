@@ -50,7 +50,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   //CLICK Listener
   canvas.addEventListener('click', function (event) {
-    event.target.style.setProperty('background-color', color);
+    if (event.target.nodeName === 'TD')
+      event.target.style.setProperty('background-color', color);
   });
 
   //Submit Listener

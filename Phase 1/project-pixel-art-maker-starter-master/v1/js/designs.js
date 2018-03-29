@@ -20,6 +20,7 @@ form = $('#sizePicker');
 
 //Functions
 function makeGrid (width, height) {
+  let t0 = performance.now();
   //Clean old table
   table.children().remove();
   //Rows loop
@@ -32,6 +33,8 @@ function makeGrid (width, height) {
     $('tr').append('<td></td>');
     column++;
   }
+  let t1 = performance.now();
+  console.log("Grid created in " + (t1 - t0) + " milliseconds.");
 }
 //Cell listener
 function draw (color) {

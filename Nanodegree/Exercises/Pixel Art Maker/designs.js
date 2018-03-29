@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   //Create a grid WIDTH x HEIGHT
   function makeGrid (width, height) {
+    let t0 = performance.now();
     let rows;
     if (canvas.hasChildNodes())
       canvas.firstElementChild.remove();
@@ -24,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
         row.insertCell(j);
       }
     }
+    let t1 = performance.now();
+    console.log("Grid created in " + (t1 - t0) + " milliseconds.");
   }
 
   //WIDTH Listener

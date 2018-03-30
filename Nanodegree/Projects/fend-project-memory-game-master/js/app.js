@@ -2,7 +2,11 @@
  * Create a list that holds all of your cards
  */
 
+ let cards = document.getElementsByClassName('fa');
+ let shuffledCards = document.getElementsByClassName('fa');
 
+ cards = Array.from(cards);
+ shuffledCards = Array.from(shuffledCards);
 
 /*
  * Display the cards on the page
@@ -37,3 +41,12 @@ function shuffle(array) {
  *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
+
+ cards.splice(0, 4);
+ shuffledCards.splice(0,4);
+
+ shuffledCards = shuffle(shuffledCards);
+
+ for (let i = 0; i < cards.length; i++) {
+   cards[i].classList.value = shuffledCards[i].classList.value;
+ }

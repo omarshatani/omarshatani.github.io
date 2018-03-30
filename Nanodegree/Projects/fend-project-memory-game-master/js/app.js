@@ -4,6 +4,7 @@
  let deck = document.getElementsByClassName('card');
  let cards = document.getElementsByClassName('fa');
  let shuffledCards = document.getElementsByClassName('fa');
+ const moves = document.querySelector('.moves');
 
  cards = Array.from(cards);
  shuffledCards = Array.from(shuffledCards);
@@ -16,8 +17,16 @@
  */
 
 function restart () {
+  //Resetting moves
+  moves.innerText = "0";
+  //Resetting cards to closed
   for (card of cards) {
     card.parentElement.setAttribute('class', 'card');
+  }
+  //Shuffling each card and update
+  shuffledCards = shuffle(shuffledCards);
+  for (let i = 0; i < cards.length; i++) {
+    cards[i].classList.value = shuffledCards[i].classList.value;
   }
 }
 
@@ -54,9 +63,3 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
  cards.splice(0, 4);
  shuffledCards.splice(0,4);
-
- shuffledCards = shuffle(shuffledCards);
-
- for (let i = 0; i < cards.length; i++) {
-   cards[i].classList.value = shuffledCards[i].classList.value;
- }

@@ -1,7 +1,7 @@
 /*
  * Create a list that holds all of your cards
  */
-
+ let deck = document.getElementsByClassName('card');
  let cards = document.getElementsByClassName('fa');
  let shuffledCards = document.getElementsByClassName('fa');
 
@@ -14,6 +14,12 @@
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
  */
+
+function restart () {
+  for (card of cards) {
+    card.parentElement.setAttribute('class', 'card');
+  }
+}
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -29,6 +35,10 @@ function shuffle(array) {
 
     return array;
 }
+
+document.addEventListener('DOMContentLoaded', function (event) {
+  restart();
+});
 
 
 /*

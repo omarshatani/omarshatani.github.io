@@ -6,6 +6,7 @@
  let shuffledCards;
  let clickStack = [];
  const moves = document.querySelector('.moves');
+ const reset = document.querySelector('.restart').firstElementChild;
 
  cards = Array.from(cards);
  shuffledCards = Array.from(cards);
@@ -17,7 +18,7 @@
  *   - add each card's HTML to the page
  */
 
-function restart () {
+function init () {
   //Resetting moves
   moves.innerText = "0";
 
@@ -61,8 +62,7 @@ function shuffle(array) {
 }
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  restart();
-
+  init();
 });
 
 deck.addEventListener('click', function (event) {
@@ -71,21 +71,30 @@ deck.addEventListener('click', function (event) {
 		    event.target.classList.add('open', 'show');
     }
     if (clickStack.length > 1) {
-      setTimeout(function () {
+
         if (compare(clickStack)) {
           clickStack[0].setAttribute('class', 'card match');
           clickStack[1].setAttribute('class', 'card match');
+          clickStack = [];
             } else {
-          close(clickStack[0]);
-          close(clickStack[1]);
+          setTimeout(function () {
+            close(clickStack[0]);
+            close(clickStack[1]);
+            clickStack = [];
+          }, 1000);
           // clickStack[0].setAttribute('class', 'card');
           // clickStack[1].setAttribute('class', 'card');
+          moves.innerText++;
             }
-        clickStack = [];
-      }, 1000);
     }
 });
 
+reset.addEventListener('click', function () {
+  moves.innerText = 0;
+  for (card of deck.children) {
+    card.setAttribute('class', 'card');
+  }
+});
 
 
 /*

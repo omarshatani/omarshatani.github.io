@@ -4,10 +4,12 @@
  let deck = document.querySelector('.deck');
  let cards = document.getElementsByClassName('card');
  let shuffledCards;
+ let clickStack = [];
  const moves = document.querySelector('.moves');
 
  cards = Array.from(cards);
  shuffledCards = Array.from(cards);
+
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
@@ -19,9 +21,10 @@ function restart () {
   //Resetting moves
   moves.innerText = "0";
 
-  for (card of cards) {
-    card.classList.add('open', 'show');
-  }
+  //For debugging
+  // for (card of cards) {
+  //   card.classList.add('open', 'show');
+  // }
 
   //Shuffling each card and update
   deck.innerHTML = "";
@@ -30,6 +33,16 @@ function restart () {
     deck.append(card);
   }
 
+}
+
+function close (card) {
+  card.setAttribute('class', 'card');
+}
+
+function compare(array) {
+    if (array[0].children[0].classList.value === array[1].children[0].classList.value)
+        return true;
+    else return false;
 }
 
 // Shuffle function from http://stackoverflow.com/a/2450976
@@ -50,6 +63,27 @@ function shuffle(array) {
 document.addEventListener('DOMContentLoaded', function (event) {
   restart();
 
+});
+
+deck.addEventListener('click', function (event) {
+    if (event.target.nodeName === "LI" && clickStack.length < 2) {
+        clickStack.push(event.target);
+		    event.target.classList.add('open', 'show');
+    }
+    if (clickStack.length > 1) {
+      setTimeout(function () {
+        if (compare(clickStack)) {
+          clickStack[0].setAttribute('class', 'card match');
+          clickStack[1].setAttribute('class', 'card match');
+            } else {
+          close(clickStack[0]);
+          close(clickStack[1]);
+          // clickStack[0].setAttribute('class', 'card');
+          // clickStack[1].setAttribute('class', 'card');
+            }
+        clickStack = [];
+      }, 1000);
+    }
 });
 
 

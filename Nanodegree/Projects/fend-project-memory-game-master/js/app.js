@@ -1,14 +1,13 @@
 /*
  * Create a list that holds all of your cards
  */
- let deck = document.getElementsByClassName('card');
- let cards = document.getElementsByClassName('fa');
- let shuffledCards = document.getElementsByClassName('fa');
+ let deck = document.querySelector('.deck');
+ let cards = document.getElementsByClassName('card');
+ let shuffledCards;
  const moves = document.querySelector('.moves');
 
  cards = Array.from(cards);
- shuffledCards = Array.from(shuffledCards);
-
+ shuffledCards = Array.from(cards);
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
@@ -19,15 +18,18 @@
 function restart () {
   //Resetting moves
   moves.innerText = "0";
-  //Resetting cards to closed
+
   for (card of cards) {
-    card.parentElement.setAttribute('class', 'card');
+    card.classList.add('open', 'show');
   }
+
   //Shuffling each card and update
-  shuffledCards = shuffle(shuffledCards);
-  for (let i = 0; i < cards.length; i++) {
-    cards[i].classList.value = shuffledCards[i].classList.value;
+  deck.innerHTML = "";
+  shuffle(shuffledCards);
+  for (card of shuffledCards) {
+    deck.append(card);
   }
+
 }
 
 // Shuffle function from http://stackoverflow.com/a/2450976
@@ -47,7 +49,9 @@ function shuffle(array) {
 
 document.addEventListener('DOMContentLoaded', function (event) {
   restart();
+
 });
+
 
 
 /*
@@ -60,6 +64,3 @@ document.addEventListener('DOMContentLoaded', function (event) {
  *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
-
- cards.splice(0, 4);
- shuffledCards.splice(0,4);

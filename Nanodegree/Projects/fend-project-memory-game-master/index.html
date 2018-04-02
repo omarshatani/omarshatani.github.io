@@ -7,6 +7,7 @@
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
     <link rel="stylesheet" href="css/app.css">
+
 </head>
 <body>
 
@@ -22,7 +23,7 @@
         		<li><i class="fa fa-star"></i></li>
         	</ul>
 
-        	<span class="moves">3</span> Moves
+        	<span class="moves">0</span> Moves
 
             <div class="restart">
         		<i class="fa fa-repeat"></i>
@@ -81,6 +82,15 @@
         </ul>
     </div>
 
-    <script src="js/app.js"></script>
+    <section class="victory notshow">
+      <div class="inner">
+        <img src="/img/victory.png" alt="Victory!">
+        You won with <span class="result">0</span> moves!
+        <button class="retry">Try again!</button>
+      </div>
+    </section>
+
+      <script src="js/app.js">
+
 </body>
 </html>

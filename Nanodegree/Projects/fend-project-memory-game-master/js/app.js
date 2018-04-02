@@ -1,109 +1,123 @@
-/*
- * Create a list that holds all of your cards
- */
- let deck = document.querySelector('.deck');
- let cards = document.getElementsByClassName('card');
- let shuffledCards;
- let clickStack = [];
- const moves = document.querySelector('.moves');
- const reset = document.querySelector('.restart').firstElementChild;
+document.addEventListener('DOMContentLoaded', function(event) {
+  // Variables declaration
+  let deck = document.querySelector('.deck');
+  let cards = document.getElementsByClassName('card');
+  let shuffledCards;
+  let clickStack = [];
+  let winCounter = 0;
+  const victory = document.querySelector('.victory');
+  const moves = document.querySelector('.moves');
+  const result = document.querySelector('.result');
+  const restart = document.querySelector('.restart');
+  const retry = document.querySelector('.retry');
+  cards = Array.from(cards);
+  shuffledCards = Array.from(cards);
 
- cards = Array.from(cards);
- shuffledCards = Array.from(cards);
-
-/*
- * Display the cards on the page
- *   - shuffle the list of cards using the provided "shuffle" method below
- *   - loop through each card and create its HTML
- *   - add each card's HTML to the page
- */
-
-function init () {
-  //Resetting moves
-  moves.innerText = "0";
-
-  //For debugging
-  // for (card of cards) {
-  //   card.classList.add('open', 'show');
-  // }
-
-  //Shuffling each card and update
-  deck.innerHTML = "";
-  shuffle(shuffledCards);
-  for (card of shuffledCards) {
-    deck.append(card);
+  // Game initialization
+  function init() {
+    // Resets win counter
+    winCounter = 0;
+    // Resets moves
+    moves.innerText = "0";
+    // Shuffling each card and update
+    deck.innerHTML = "";
+    shuffle(shuffledCards);
+    for (card of shuffledCards) {
+      deck.append(card);
+    }
   }
 
-}
-
-function close (card) {
-  card.setAttribute('class', 'card');
-}
-
-function compare(array) {
-    if (array[0].children[0].classList.value === array[1].children[0].classList.value)
-        return true;
-    else return false;
-}
-
-// Shuffle function from http://stackoverflow.com/a/2450976
-function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-
-    while (currentIndex !== 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-    }
-
-    return array;
-}
-
-document.addEventListener('DOMContentLoaded', function (event) {
-  init();
-});
-
-deck.addEventListener('click', function (event) {
-    if (event.target.nodeName === "LI" && clickStack.length < 2) {
-        clickStack.push(event.target);
-		    event.target.classList.add('open', 'show');
-    }
+  //Game logic
+  function Game() {
     if (clickStack.length > 1) {
-
-        if (compare(clickStack)) {
-          clickStack[0].setAttribute('class', 'card match');
-          clickStack[1].setAttribute('class', 'card match');
+      // If cards match, set new class
+      if (compare(clickStack)) {
+        clickStack[0].setAttribute('class', 'card match');
+        clickStack[1].setAttribute('class', 'card match');
+        clickStack = [];
+        winCounter++;
+      } else {
+        // If cards don't match, close them and empty stack
+        setTimeout(function() {
+          close(clickStack[0]);
+          close(clickStack[1]);
           clickStack = [];
-            } else {
-          setTimeout(function () {
-            close(clickStack[0]);
-            close(clickStack[1]);
-            clickStack = [];
-          }, 1000);
-          // clickStack[0].setAttribute('class', 'card');
-          // clickStack[1].setAttribute('class', 'card');
-          moves.innerText++;
-            }
+        }, 1000);
+        // Increment moves counter
+        moves.innerText++;
+      }
     }
-});
+    // Win check
+    if (winCounter === 8) {
+      // Open win interface
+      victory.style.display = "block";
+      // Update result
+      result.innerText = moves.innerText;
+    }
+  }
 
-reset.addEventListener('click', function () {
-  moves.innerText = 0;
-  for (card of deck.children) {
+  // Closes a single card
+  function close(card) {
     card.setAttribute('class', 'card');
   }
+
+  // Resets games
+  function reset() {
+    // Resets moves
+    moves.innerText = "0";
+    // Closes all cards
+    for (card of deck.children) {
+      // card.setAttribute('class', 'card');
+      close(card);
+    }
+  }
+
+  // Checks if cards are the same or not
+  function compare(array) {
+    if (array[0].children[0].classList.value === array[1].children[0].classList.value)
+      return true;
+    else
+      return false;
+  }
+
+  // Shuffle function from http://stackoverflow.com/a/2450976
+  function shuffle(array) {
+    var currentIndex = array.length,
+      temporaryValue, randomIndex;
+    while (currentIndex !== 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    return array;
+  }
+
+  // Listener for card click
+  deck.addEventListener('click', function(event) {
+    // Opens card if clicked and adds to stack
+    if (event.target.nodeName === "LI" && clickStack.length < 2) {
+      clickStack.push(event.target);
+      event.target.classList.add('open', 'show');
+    }
+    // Game logic update
+    Game();
+  });
+
+  // Restart button listener
+  restart.addEventListener('click', function() {
+    reset();
+  });
+
+  // Play again listener
+  retry.addEventListener('click', function() {
+    init();
+    reset();
+    victory.style.display = "none";
+  });
+
+  // Main
+  init();
+
 });
-
-
-/*
- * set up the event listener for a card. If a card is clicked:
- *  - display the card's symbol (put this functionality in another function that you call from this one)
- *  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
- *  - if the list already has another card, check to see if the two cards match
- *    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
- *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
- *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
- *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
- */

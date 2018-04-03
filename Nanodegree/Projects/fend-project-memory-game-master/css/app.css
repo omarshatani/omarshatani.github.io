@@ -117,6 +117,7 @@ h1 {
   top: 0;
 }
 
+
 .inner {
   display: flex;
   height: 100%;
@@ -125,6 +126,15 @@ h1 {
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
+}
+
+.inner img {
+  width: 70px;
+}
+
+.inner span {
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 .retry {

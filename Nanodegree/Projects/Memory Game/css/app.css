@@ -98,9 +98,10 @@ h1 {
     margin: 0 5px 0 0;
 }
 
-.score-panel .stars li {
+.score-panel .stars li, .score-panel .timer li {
     list-style: none;
     display: inline-block;
+    margin-right: 3px;
 }
 
 .score-panel .restart {
@@ -108,6 +109,11 @@ h1 {
     cursor: pointer;
 }
 
+.score-panel .timer {
+  padding: 0;
+  display: inline-block;
+  margin: 0 5px 0 35px;
+}
 
 /*
  * Styles for the Victory Interface

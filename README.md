@@ -1,1 +1,0 @@
-# omarshatani.github.io

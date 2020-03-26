@@ -6,6 +6,24 @@
 		<title>Lightning Out</title>
 	</head>
 	<body>
-		<div class="">CIAO</div>
+		<div id="lightning"></div>
+		<script src="https://devam-servizioclienti.cs108.force.com/lightning/lightning.out.js"></script>
+		<script>
+			$Lightning.use(
+				"c:HelloWorldApp",
+				function() {
+					$Lightning.createComponent(
+						"c:helloWorld",
+						{},
+						"lightning",
+						function(cmp) {
+							console.log("LWC component was created");
+							// do some stuff
+						}
+					);
+				},
+				"https://devam-servizioclienti.cs108.force.com/"
+			);
+		</script>
 	</body>
 </html>

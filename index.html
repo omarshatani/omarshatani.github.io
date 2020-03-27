@@ -10,11 +10,11 @@
 		<script src="https://sara--devam.lightning.force.com/lightning/lightning.out.js"></script>
 		<script>
 			$Lightning.use(
-				"c:CreateCaseFromWebApp",
+				"c:CreateCaseWebApplication",
 				function() {
 					$Lightning.createComponent(
-						"c:createCaseFromWeb",
-						{ accountId: "0011l00000ZaBqGAAV" },
+						"c:createCaseWeb",
+						{},
 						"lightning",
 						function(cmp) {
 							console.log("LWC component was created");

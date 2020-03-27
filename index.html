@@ -10,10 +10,10 @@
 		<script src="https://sara--devam.lightning.force.com/lightning/lightning.out.js"></script>
 		<script>
 			$Lightning.use(
-				"c:HelloWorldAuthenticatedApp",
+				"c:CreateCaseFromWebApp",
 				function() {
 					$Lightning.createComponent(
-						"c:helloWorld",
+						"c:createCaseFromWeb",
 						{ accountId: "0011l00000ZaBqGAAV" },
 						"lightning",
 						function(cmp) {
@@ -23,8 +23,7 @@
 						}
 					);
 				},
-				"https://sara--devam.lightning.force.com/",
-				"00D1l0000000OIg!ARAAQGl4nvzymsd9a5yyYBMVbevtIO29eThHKGote1BUNghYu2JoTRTbBhh7EaSz0U8n4MXNC.8ZKLZlqSkyFM8HvhBqcMnL"
+				"https://sara--devam.lightning.force.com/"
 			);
 		</script>
 	</body>

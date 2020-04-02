@@ -19,3 +19,7 @@ body {
 .slds-datepicker__filter_month {
 	color: #000 !important;
 }
+
+.slds-select > option {
+	color: #000 !important;
+}

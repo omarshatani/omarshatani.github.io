@@ -2,3 +2,12 @@ body {
 	margin: 0;
 	font-family: "Poppins", sans-serif !important;
 }
+
+.slds-input {
+	background: transparent;
+	border: 0;
+}
+
+.slds-form-element label {
+	display: none;
+}

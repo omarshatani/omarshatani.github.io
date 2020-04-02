@@ -4,10 +4,10 @@ body {
 }
 
 .slds-input {
-	background: transparent;
-	border: 0;
+	background: transparent !important;
+	border: 0 !important;
 }
 
 .slds-form-element label {
-	display: none;
+	display: none !important;
 }

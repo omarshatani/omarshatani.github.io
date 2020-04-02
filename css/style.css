@@ -12,14 +12,9 @@ body {
 	display: none !important;
 }
 
-.slds-datepicker__month {
-	color: #000 !important;
-}
-
-.slds-datepicker__filter_month {
-	color: #000 !important;
-}
-
-.slds-select > option {
+.slds-datepicker__month,
+.slds-datepicker__filter_month,
+.slds-select,
+.slds-select option {
 	color: #000 !important;
 }

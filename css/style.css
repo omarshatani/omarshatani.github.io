@@ -11,3 +11,11 @@ body {
 .slds-form-element label {
 	display: none !important;
 }
+
+.slds-datepicker__month {
+	color: #000 !important;
+}
+
+.slds-datepicker__filter_month {
+	color: #000 !important;
+}

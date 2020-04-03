@@ -5,9 +5,9 @@ body {
 	font-size: 1.5rem;*/
 }
 
-.lightning {
+.lightning,
+.slds-scope {
 	font-family: Poppins, sans-serif !important;
-	font-size: 1.5rem;
 }
 
 .slds-input {

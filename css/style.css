@@ -1,6 +1,8 @@
+html,
 body {
 	margin: 0;
-	font-family: "Poppins", sans-serif !important;
+	font-family: Poppins, sans-serif !important;
+	font-size: 1.5rem;
 }
 
 .slds-input {

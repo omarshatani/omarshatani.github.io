@@ -1,6 +1,11 @@
 html,
 body {
 	margin: 0;
+	/*font-family: Poppins, sans-serif !important;
+	font-size: 1.5rem;*/
+}
+
+.lightning {
 	font-family: Poppins, sans-serif !important;
 	font-size: 1.5rem;
 }

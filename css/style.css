@@ -22,7 +22,7 @@ body {
 }
 
 .slds-form-element {
-	border-bottom: 3px solid #db3c32;
+	/*border-bottom: 3px solid #db3c32;*/
 }
 
 .slds-scope label {

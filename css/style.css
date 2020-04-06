@@ -13,6 +13,10 @@ body {
 	border: 0 !important;
 }
 
+.slds-input::placeholder {
+	color: #aa90b9 !important;
+}
+
 .slds-form-element label {
 	display: none !important;
 }
@@ -22,8 +26,4 @@ body {
 .slds-select,
 .slds-select option {
 	color: #000 !important;
-}
-
-.slds-scope .slds-input::placeholder {
-	color: #aa90b9 !important;
 }

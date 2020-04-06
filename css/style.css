@@ -25,10 +25,6 @@ body {
 	border-bottom: 3px solid #db3c32;
 }
 
-.slds-listbox__option {
-	color: #000;
-}
-
 .slds-scope label {
 	color: #fff !important;
 }
@@ -36,6 +32,7 @@ body {
 .slds-datepicker__month,
 .slds-datepicker__filter_month,
 .slds-select,
+.slds-listbox__option,
 .slds-select option {
 	color: #000 !important;
 }

@@ -25,6 +25,10 @@ body {
 	border-bottom: 3px solid #db3c32;
 }
 
+.slds-listbox__option {
+	color: #000;
+}
+
 .slds-scope label {
 	color: #fff !important;
 }

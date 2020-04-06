@@ -23,3 +23,7 @@ body {
 .slds-select option {
 	color: #000 !important;
 }
+
+.slds-scope .slds-input::placeholder {
+	color: #aa90b9 !important;
+}

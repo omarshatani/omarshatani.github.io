@@ -21,8 +21,8 @@ body {
 	/*display: none !important;*/
 }
 
-.slds-form-element {
-	/*border-bottom: 3px solid #db3c32;*/
+.slds-form-element__control .slds-input-has-icon .slds-input-has-icon_right {
+	border-bottom: 3px solid #db3c32;
 }
 
 .slds-scope label {

@@ -13,13 +13,16 @@ body {
 	border: 0 !important;
 }
 
-.slds-input::placeholder,
-.slds-scope label {
+.slds-input::placeholder {
 	color: #aa90b9 !important;
 }
 
 .slds-dropdown-trigger label {
 	display: none !important;
+}
+
+.slds-scope label {
+	color: #fff !important;
 }
 
 .slds-datepicker__month,

@@ -17,9 +17,9 @@ body {
 	color: #aa90b9 !important;
 }
 
-/*.slds-form-element label {
+.slds-dropdown-trigger label {
 	display: none !important;
-}*/
+}
 
 .slds-datepicker__month,
 .slds-datepicker__filter_month,

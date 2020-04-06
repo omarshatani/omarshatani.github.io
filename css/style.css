@@ -13,7 +13,8 @@ body {
 	border: 0 !important;
 }
 
-.slds-input::placeholder {
+.slds-input::placeholder,
+.slds-scope label {
 	color: #aa90b9 !important;
 }
 

@@ -18,7 +18,7 @@ body {
 }
 
 .slds-dropdown-trigger label {
-	display: none !important;
+	/*display: none !important;*/
 }
 
 .slds-scope label {

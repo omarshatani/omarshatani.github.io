@@ -21,6 +21,10 @@ body {
 	/*display: none !important;*/
 }
 
+.slds-form-element__control {
+	border-bottom: 3px solid #db3c32;
+}
+
 .slds-scope label {
 	color: #fff !important;
 }

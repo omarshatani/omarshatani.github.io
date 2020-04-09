@@ -36,3 +36,16 @@ body {
 .slds-select option {
 	color: #000 !important;
 }
+
+.slds-progress-bar {
+	background: #00000036;
+}
+.slds-progress-bar,
+.slds-progress-bar__value {
+	border-radius: 3px;
+}
+
+.slds-scope .slds-progress-bar_large,
+.slds-scope .slds-progress-bar--large {
+	height: 0.4rem;
+}

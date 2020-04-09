@@ -38,14 +38,14 @@ body {
 }
 
 .slds-progress-bar {
-	background: #00000036;
+	background: #00000036 !important;
 }
 .slds-progress-bar,
 .slds-progress-bar__value {
-	border-radius: 3px;
+	border-radius: 3px !important;
 }
 
 .slds-scope .slds-progress-bar_large,
 .slds-scope .slds-progress-bar--large {
-	height: 0.4rem;
+	height: 0.4rem !important;
 }

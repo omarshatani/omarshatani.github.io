@@ -49,8 +49,8 @@ body {
 	background: linear-gradient(
 		90deg,
 		rgba(255, 255, 255, 0.5) 0%,
-		rgba(255, 255, 255, 1) 100%
-	);
+		rgba(255, 255, 255, 1) 100% ù
+	) !important;
 }
 
 .slds-scope .slds-progress-bar_large,

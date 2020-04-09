@@ -45,6 +45,14 @@ body {
 	border-radius: 3px !important;
 }
 
+.slds-scope .slds-progress-bar__value {
+	background: linear-gradient(
+		90deg,
+		rgba(255, 255, 255, 0.5) 0%,
+		rgba(255, 255, 255, 1) 100%
+	);
+}
+
 .slds-scope .slds-progress-bar_large,
 .slds-scope .slds-progress-bar--large {
 	height: 0.4rem !important;

@@ -17,8 +17,8 @@ body {
 	color: #aa90b9 !important;
 }
 
-.slds-dropdown-trigger label {
-	/*display: none !important;*/
+#auraErrorMessage {
+	display: none !important;
 }
 
 .slds-dropdown-trigger {

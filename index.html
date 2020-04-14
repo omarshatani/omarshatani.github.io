@@ -8,14 +8,14 @@
 	</head>
 	<body>
 		<div id="lightning"></div>
-		<script src="https://sara--am.lightning.force.com/lightning/lightning.out.js"></script>
+		<script src="https://am-servizioclienti.cs129.force.com/lightning/lightning.out.js"></script>
 		<script>
 			$Lightning.use(
 				"c:CreateCaseWebApplication",
 				function () {
 					$Lightning.createComponent(
 						"c:createCaseWeb",
-						{ recordId: "0013O0000091ZKLQA2" },
+						{ recordId: "0013O0000091ZKLQA2", actionType: "D" }, // Per Denuncia un Sinitro
 						"lightning",
 						function (cmp) {
 							console.log("LWC component was created");
@@ -24,7 +24,7 @@
 						}
 					);
 				},
-				"https://sara--am.lightning.force.com/",
+				"https://am-servizioclienti.cs129.force.com/",
 				"00D3O0000008jnh!ARAAQDBQSPXZO_1bvgHLf_HpyQf2k1oeBmBJmxd5zGghMt6pvREf5sjumq9oX_bMXjXjZiCvNDQDdBjxhBxCA.NRqExgxw0L"
 			);
 		</script>

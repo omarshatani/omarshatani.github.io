@@ -10,7 +10,7 @@
 
 <body>
 	<div id="lightning">
-		<div class="loader">Loading...</div>
+		<div class="loader" id="loader">Loading...</div>
 	</div>
 	<script src="https://sara--am.lightning.force.com/lightning/lightning.out.js"></script>
 	<script>
@@ -23,7 +23,7 @@
 					},
 					"lightning",
 					function (cmp) {
-						document.getElementsByClassName("loader").style.display = "none";
+						document.getElementById("loader").style.display = "none";
 						console.log("LWC component was created");
 						debugger;
 						console.log(cmp);
